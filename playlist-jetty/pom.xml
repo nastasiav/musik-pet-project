@@ -9,21 +9,23 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>library-clean</artifactId>
+    <artifactId>playlist-jetty</artifactId>
 
     <properties>
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <graphql-java>25.0</graphql-java>
+        <spring-webmvc>7.0.6</spring-webmvc>
         <jetty>12.1.8</jetty>
+        <servlet-api>6.2.0-M1</servlet-api>
+        <slf4j>2.0.17</slf4j>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.graphql-java</groupId>
-            <artifactId>graphql-java</artifactId>
-            <version>${graphql-java}</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring-webmvc}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -36,6 +38,19 @@
             <version>${jetty}</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>${servlet-api}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j}</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
+
 
 </project>

@@ -8,7 +8,7 @@
 		<version>4.1.0-M4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.my.edy</groupId>
+	<groupId>org.my.edu</groupId>
 	<artifactId>main-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
