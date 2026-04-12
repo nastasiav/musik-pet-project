@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: spring-graphql
+
+server:
+  port: 8101
