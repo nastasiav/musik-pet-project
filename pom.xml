@@ -18,6 +18,7 @@
     <modules>
         <module>main-api</module>
         <module>library-boot</module>
+        <module>library-clean</module>
     </modules>
 
 </project>
