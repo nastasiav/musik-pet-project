@@ -20,6 +20,7 @@
         <module>library-boot</module>
         <module>library-clean</module>
         <module>playlist-jetty</module>
+        <module>recommend-webflux</module>
     </modules>
 
 </project>
