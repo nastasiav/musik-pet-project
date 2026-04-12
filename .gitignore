@@ -40,3 +40,7 @@ build/
 .DS_Store!/.idea/
 /**/.gitattributes
 /recommend-webflux/.gitignore
+/player-tomcat/mvnw
+/player-tomcat/mvnw.cmd
+/player-tomcat/.gitignore
+/player-tomcat/HELP.md
