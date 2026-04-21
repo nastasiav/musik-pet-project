@@ -45,6 +45,12 @@ spring:
                 - Path=/player/**
               filters:
                 - RewritePath=/player/(?<path>.*), /$\{path}
+            - id: playlist-boot
+              uri: http://localhost:8106
+              predicates:
+                - Path=/playlistb/**
+              filters:
+                - RewritePath=/playlistb/(?<path>.*), /$\{path}
 
 logging:
   level:
