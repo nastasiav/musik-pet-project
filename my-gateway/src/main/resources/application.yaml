@@ -1,0 +1,56 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: my-gateway
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: main
+              uri: http://localhost:8100
+              predicates:
+                - Path=/main/**
+              filters:
+                - RewritePath=/main/(?<path>.*), /$\{path}
+            - id: library-boot
+              uri: http://localhost:8101
+              predicates:
+                - Path=/libraryb/**
+              filters:
+                - RewritePath=/libraryb/(?<path>.*), /$\{path}
+            - id: library-clean
+              uri: http://localhost:8102
+              predicates:
+                - Path=/library/**
+              filters:
+                - RewritePath=/library/(?<path>.*), /$\{path}
+            - id: playlist
+              uri: http://localhost:8103
+              predicates:
+                - Path=/playlist/**
+              filters:
+                - RewritePath=/playlist/(?<path>.*), /$\{path}
+            - id: recommender
+              uri: http://localhost:8104
+              predicates:
+                - Path=/recommend/**
+              filters:
+                - RewritePath=/recommend/(?<path>.*), /$\{path}
+            - id: player-tomcat
+              uri: http://localhost:8105
+              predicates:
+                - Path=/player/**
+              filters:
+                - RewritePath=/player/(?<path>.*), /$\{path}
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.server: DEBUG
+    reactor.netty: DEBUG
+
+

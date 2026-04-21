@@ -44,3 +44,9 @@ build/
 /player-tomcat/mvnw.cmd
 /player-tomcat/.gitignore
 /player-tomcat/HELP.md
+/spring-gateway/.gitignore
+/spring-gateway/mvnw
+/spring-gateway/mvnw.cmd
+/my-gateway/.mvn/wrapper/maven-wrapper.properties
+/my-gateway/mvnw
+/my-gateway/mvnw.cmd

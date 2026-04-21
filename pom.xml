@@ -22,6 +22,7 @@
         <module>playlist-jetty</module>
         <module>recommend-webflux</module>
         <module>player-tomcat</module>
+        <module>my-gateway</module>
     </modules>
 
 </project>
