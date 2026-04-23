@@ -1,8 +1,10 @@
-package org.my.edy;
+package org.my.edu.libraryclean;
 
 import org.eclipse.jetty.ee10.servlet.ServletContextHandler;
+import org.eclipse.jetty.ee10.servlet.ServletHolder;
 import org.eclipse.jetty.server.Server;
-import org.my.edy.exceprions.MyServerException;
+import org.my.edu.libraryclean.exceptions.MyServerException;
+import org.my.edu.libraryclean.web.MyGraphQLServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +16,9 @@ public class Main {
         Server server = new Server(port);
 
         ServletContextHandler context = new ServletContextHandler();
+
+        context.addServlet(new ServletHolder(new MyGraphQLServlet()), "/graphql");
+
         context.setContextPath("/");
         server.setHandler(context);
 

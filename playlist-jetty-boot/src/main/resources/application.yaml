@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: playlist-jetty-boot
+
+
+server:
+  port: 8106

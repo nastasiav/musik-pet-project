@@ -1,0 +1,7 @@
+type StatusApp {
+    isActiveGraphqlBoot: Boolean!
+}
+
+type Query {
+  status: StatusApp!
+}
